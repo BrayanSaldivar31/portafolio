@@ -46,16 +46,65 @@ window.onscroll = function(){
 }
 
 
-document.querySelector('#submit').addEventListener('click', function(){
+function validar(){
+  var form = document.form;
 
-  let nombre = document.querySelector('#name').value;
-  let telefono = document.querySelector('#phone').value;
-  let correo = document.querySelector('#email').value;
-  let tema = document.querySelector('#tema').value;
-  let mensaje = document.querySelector('#message').value;
+  if(form.nombre.value == 0){
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'El campo nombre esta vacio'
+    })
+    form.nombre.value = "";
+    form.nombre.focus();
+    return false;
+  }
 
-  let url = "https://api.whatsapp.com/send?phone=5620949905&text=Hola, mi nombre es " + nombre + "%0APonte en contacto conmigo al numero " + telefono + ", o al correo " + correo + "%0AEl motivo de mi mensaje es " + tema + "%0A" + mensaje;
+  if(form.telefono.value == 0){
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'El campo telefono esta vacio'
+    })
+    form.telefono.value = "";
+    form.telefono.focus();
+    return false;
+  }
 
-  window.open(url)
+  if(form.correo.value == 0){
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'El campo correo esta vacio'
+    })
+    form.correo.value = "";
+    form.correo.focus();
+    return false;
+  }
 
-});
+  if(form.mensaje.value == 0){
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'El campo mensaje esta vacio'
+    })
+    form.mensaje.value = "";
+    form.mensaje.focus();
+    return false;
+  }
+
+  if(document.querySelector('#submit')){
+    addEventListener('click', function(){
+      let nombre = document.querySelector('#name').value;
+      let telefono = document.querySelector('#phone').value;
+      let correo = document.querySelector('#email').value;
+      let mensaje = document.querySelector('#message').value;
+
+      let url = "https://api.whatsapp.com/send?phone=5620949905&text=Hola, mi nombre es " + nombre + "%0APonte en contacto conmigo al numero " + telefono + ", o al correo " + correo + "%0AEl motivo de mi mensaje es " + mensaje;
+
+      window.open(url)
+    })
+  }
+
+}
+

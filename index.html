@@ -47,9 +47,12 @@
             <h2>Ingeniero en Desarrollo y Gestión de Software</h2>
             <div class="redes">
                 <a href="https://www.facebook.com/brayan.saldivar.773"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=5620949905&text=Hola, Necesito mas Información de tu Trabajo!"><i class="fa-brands fa-whatsapp"></i></a>
+                <a
+                    href="https://api.whatsapp.com/send?phone=5620949905&text=Hola, Necesito mas Información de tu Trabajo!"><i
+                        class="fa-brands fa-whatsapp"></i></a>
                 <a href="https://www.instagram.com/thecotrik24/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/brayan-saldivar-crack-bb2238210/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/brayan-saldivar-crack-bb2238210/"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://github.com/BrayanSaldivar31"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
@@ -60,8 +63,10 @@
         <div class="contenido-seccion">
             <h2>SOBRE MI</h2>
             <p>
-                <span>Hola, soy Brayan Saldivar Orozco.</span> Soy una persona comunicativa, amable y capaz de adaptarse a cada situación.
-                <br>Egresado de Ingenieria, con gran interés en acceder al mercado laboral para poner en práctica mis conocimientos.
+                <span>Hola, soy Brayan Saldivar Orozco.</span> Soy una persona comunicativa, amable y capaz de adaptarse
+                a cada situación.
+                <br>Egresado de Ingenieria, con gran interés en acceder al mercado laboral para poner en práctica mis
+                conocimientos.
                 <br>Persona muy adaptable a todo tipo de entornos y clara orientación a objetivos.
                 <br>Desearía desarrollarme profesionalmente en una empresa como la suya.
             </p>
@@ -358,19 +363,20 @@
             <h2>CONTACTO</h2>
             <div class="fila">
                 <!-- Formulario -->
-                <div class="col">
-                    <input id="name" type="text" placeholder="Tú Nombre">
-                    <input id="phone" type="number" placeholder="Número telefónico">
-                    <input id="email" type="email" placeholder="Dirección de correo">
-                    <input id="tema" type="text" placeholder="Tema">
-                    <textarea id="message" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                        <button id="submit" class="formulario">
-                            Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
-                            <span class="overlay"></span>
-                        </button>
-                </div>
+                    <div class="col">
+                        <form name="form" action="#" onsubmit="return validar();">
+                            <input id="name" name="nombre" type="text" placeholder="Tú Nombre">
+                            <input id="phone" name="telefono" type="number" placeholder="Número telefónico">
+                            <input id="email" name="correo" type="email" placeholder="Dirección de correo">
+                            <textarea id="message" name="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                            <button id="submit" class="formulario" onclick="validar();">
+                                Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                                <span class="overlay"></span>
+                            </button>
+                        </form>
+                    </div>
                 <!-- Mapa -->
-                <!-- <div class="col">
+                <div class="col">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d234.84273697011193!2d-98.98739155014815!3d19.649354936493424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1671218764597!5m2!1ses-419!2smx"
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -392,7 +398,7 @@
                             </li>
                         </ul>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </section>
@@ -404,9 +410,12 @@
         <div class="contenido-banner">
             <div class="redes">
                 <a href="https://www.facebook.com/brayan.saldivar.773"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=5620949905&text=Hola, Necesito mas Información de tu Trabajo!"><i class="fa-brands fa-whatsapp"></i></a>
+                <a
+                    href="https://api.whatsapp.com/send?phone=5620949905&text=Hola, Necesito mas Información de tu Trabajo!"><i
+                        class="fa-brands fa-whatsapp"></i></a>
                 <a href="https://www.instagram.com/thecotrik24/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/brayan-saldivar-crack-bb2238210/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/brayan-saldivar-crack-bb2238210/"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://github.com/BrayanSaldivar31"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
@@ -414,17 +423,18 @@
 
     <script src="js/java.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script type="text/javascript">
-		document.addEventListener("click",function (e){
-		  if(e.target.classList.contains("gallery-item")){
-		  	  const src = e.target.getAttribute("src");
-		  	  document.querySelector(".modal-img").src = src;
-		  	  const myModal = new bootstrap.Modal(document.getElementById('gallery-popup'));
-		  	  myModal.show();
-		  }
-		})
-	</script>
+        document.addEventListener("click", function (e) {
+            if (e.target.classList.contains("gallery-item")) {
+                const src = e.target.getAttribute("src");
+                document.querySelector(".modal-img").src = src;
+                const myModal = new bootstrap.Modal(document.getElementById('gallery-popup'));
+                myModal.show();
+            }
+        })
+    </script>
 
 </body>
 
