@@ -291,7 +291,7 @@ html{
 }
 @keyframes java{
     0%{width: 0%;}
-    100%{width: 65%;}
+    100%{width: 70%;}
 }
 /* flutter */
 .habilidades .habilidad .flutter{
@@ -300,7 +300,7 @@ html{
 }
 @keyframes flutter{
     0%{width: 0%;}
-    100%{width: 65%;}
+    100%{width: 70%;}
 }
 /* htmlcss */
 .habilidades .habilidad .htmlcss{
@@ -309,7 +309,7 @@ html{
 }
 @keyframes htmlcss{
     0%{width: 0%;}
-    100%{width: 74%;}
+    100%{width: 73%;}
 }
 /* python */
 .habilidades .habilidad .python{
